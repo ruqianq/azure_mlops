@@ -9,7 +9,6 @@ from ml_service.util.env_variables import Env
 from ml_service.util.manage_environment import get_environment
 import os
 
-
 def main():
     e = Env()
     # Get Azure machine learning workspace

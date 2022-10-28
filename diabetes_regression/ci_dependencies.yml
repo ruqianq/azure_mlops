@@ -1,5 +1,9 @@
 name: mlopspython_ci
 
+channels:
+  - conda-forge
+  - defaults
+
 dependencies:
   # The python interpreter version.
   - python=3.7.*
@@ -8,16 +12,13 @@ dependencies:
   - numpy=1.18.*
   - pandas=1.0.*
   - scikit-learn=0.22.*
-    # dependencies for MLOps with R.
-  - r=3.6.0
-  - r-essentials=3.6.0
 
   - conda-forge::jq
-  - pip=20.0.*
+  - pip
 
   - pip:
       # dependencies with versions aligned with conda_dependencies.yml.
-      - azureml-sdk==1.27.*
+      - azureml-core
 
       # Additional pip dependencies for the CI environment.
       - pytest==5.4.*
@@ -26,4 +27,4 @@ dependencies:
       - python-dotenv==0.12.*
       - flake8==3.7.*
       - flake8_formatter_junit_xml==0.0.*
-      - azure-cli==2.3.*
+      - azure-cli
