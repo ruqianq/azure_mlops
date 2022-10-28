@@ -22,18 +22,15 @@ dependencies:
   - pip
 
   - pip:
-      # Base AzureML SDK
-      - azureml-core
-
       # Must match AzureML SDK version.
       # https://docs.microsoft.com/en-us/azure/machine-learning/concept-environments
       - azureml-core
 
       # Training deps
       - scikit-learn
+      - pandas=1.0.*
 
       # Scoring deps
       - inference-schema[numpy-support]
 
-      # MLOps with R
       - azure-storage-blob
